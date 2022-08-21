@@ -10,7 +10,6 @@
 .directoryList li {
     list-style: none;
     display: flex;
-    gap: 15px;
     padding: 15px;
     justify-content: space-between;
 }
@@ -28,11 +27,19 @@
     width: 30px;
 }
 
+.directoryList .iconsContainer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
 .directoryList button {
     background-color: transparent;
     border-color: transparent;
     color: #ffffff;
     cursor: pointer;
+    padding: 0;
+    border-width: 0;
 }
 
 .directoryList button:hover {

@@ -29,7 +29,7 @@ const Directory = ({ directories, files, message, updateContentDirectory }) => {
                     file={file}
                     updateContentDirectory={updateContentDirectory}
                 />
-            )}
+            )} 
         </ul>
     );
 }
@@ -62,7 +62,7 @@ const DirectoryElement = ({ file, isDirectory, updateContentDirectory }) => {
         (path[0] === "/" ? path.slice(1) : path) +
         (path.at(-1) === "/" ? "" : "/") +
         file
-    );
+    , []);
 
     const Container = ({ children }) => isDirectory ? (
         <Link to={getDirectoryPath(file)}>
@@ -82,7 +82,7 @@ const DirectoryElement = ({ file, isDirectory, updateContentDirectory }) => {
                     {file}
                 </Container>
             </div>
-            <div>
+            <div className={styles.iconsContainer}>
                 {!isDirectory && 
                     <a href={getFileURL} download={file}>
                         <i title="Download" className="fas fa-download"></i>
