@@ -76,13 +76,11 @@ const DirectoryElement = ({ file, isDirectory, updateContentDirectory }) => {
 
     return (
         <li>
+            <Container>
+                <Icon/>
+                {file}
+            </Container>
             <div>
-                <Container>
-                    <Icon/>
-                    {file}
-                </Container>
-            </div>
-            <div className={styles.iconsContainer}>
                 {!isDirectory && 
                     <a href={getFileURL} download={file}>
                         <i title="Download" className="fas fa-download"></i>

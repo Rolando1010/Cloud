@@ -27,7 +27,7 @@
     width: 30px;
 }
 
-.directoryList .iconsContainer {
+.directoryList div {
     display: flex;
     align-items: center;
     text-align: center;
