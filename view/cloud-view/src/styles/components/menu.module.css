@@ -1,0 +1,25 @@
+.menu {
+    padding: 15px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #525157;
+}
+
+.menu a {
+    color: #2c90a1;
+    margin: 0;
+    font-style: italic;
+    font-size: 32px;
+    outline: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #1e5a64;
+}
+
+.menu img {
+    width: 50px;
+}

@@ -1,0 +1,4 @@
+/view/cloud-view/node_modules
+/view/cloud-view/package-lock.json
+/storage/*
+db.sqlite3

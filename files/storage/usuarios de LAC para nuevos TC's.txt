@@ -1,0 +1,16 @@
+https://namutravel.atlassian.net/browse/ISD-6037
+
+user: Abby Christ
+email: abbychrist@namutravel.com
+username: abbyC
+password: https://pwpush.com/en/p/jwgd0w6gmau7
+
+user: Brooke Herman
+email: brookeherman@namutravel.com
+username: brookeH
+password: https://pwpush.com/en/p/wa_qey0azh5b59fjhoc
+
+user: Silvia Mattio
+email: silviamattio@namutravel.com
+username: silviaM
+password: https://pwpush.com/en/p/pjotqpnuehne
