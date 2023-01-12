@@ -3,7 +3,7 @@ from src.file_system.path import get_absolute_path
 
 FILE_PATH = get_absolute_path("../notes.json")
 
-def get_data_notes() -> dict[str, str | list]:
+def get_data_notes() -> dict[str, str]:
     notes_file = open(FILE_PATH)
     data_notes = json.load(notes_file)
     notes_file.close()

@@ -31,7 +31,7 @@ def save_note(title: str, description: str):
     data_notes["notes"] = notes
     save_data_notes(data_notes)
 
-def get_note(note_id: int) -> dict[str, str] | None:
+def get_note(note_id: int) -> dict[str, str]:
     notes = get_notes()
     filtered_notes = [n for n in notes if n["id"] == note_id]
     return filtered_notes[0] if filtered_notes else None

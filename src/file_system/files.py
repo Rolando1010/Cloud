@@ -4,7 +4,7 @@ from werkzeug.datastructures import FileStorage
 from .path import get_storage_directory, add_paths
 from .directories import delete_directory
 
-def get_path_files(directory: str) -> dict[str, list[str] | bool | str]:
+def get_path_files(directory: str) -> dict[str, list[str]]:
     path = get_storage_directory(directory)
     success = False
     message = ""
@@ -34,7 +34,7 @@ def get_path_files(directory: str) -> dict[str, list[str] | bool | str]:
 
 def upload_files(directory: str, files: list[FileStorage]):
     path = get_storage_directory(directory)
-    results: list[dict[str, bool | str]] = []
+    results: list[dict[str, str]] = []
     for file in files:
         file.save(path + "/" + file.filename)
         results += [{
@@ -44,7 +44,7 @@ def upload_files(directory: str, files: list[FileStorage]):
         }]
     return results
 
-def delete_file(path: str, file_name: str) -> dict[str, bool | str]:
+def delete_file(path: str, file_name: str) -> dict[str, str]:
     success = True
     message = ""
     try:
@@ -66,7 +66,7 @@ def delete_file_path(directory: str, file: str):
 def move_files(origin_folder: str, destination_folder: str, files: list[str]):
     origin = get_storage_directory(origin_folder)
     destination = get_storage_directory(destination_folder)
-    results: list[str, str | bool] = []
+    results: list[str, str] = []
     for file in files:
         success = True
         message = ""

@@ -2,7 +2,7 @@ import os
 import shutil
 from .path import STORAGE_PATH, add_paths, get_absolute_path
 
-def create_directory(path: str, new_directory: str) -> dict[str, str | bool]:
+def create_directory(path: str, new_directory: str) -> dict[str, str]:
     actual_directory = get_absolute_path(add_paths(STORAGE_PATH, path))
     new_directory_path = add_paths(actual_directory, new_directory)
     success = True
@@ -20,7 +20,7 @@ def create_directory(path: str, new_directory: str) -> dict[str, str | bool]:
         "message": message
     }
 
-def delete_directory(path: str, directory_name: str) -> dict[str | bool]:
+def delete_directory(path: str, directory_name: str) -> dict[str, str]:
     success = True
     message = ""
     try:
