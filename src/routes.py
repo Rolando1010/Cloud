@@ -14,7 +14,7 @@ def list_files_view():
 @app.post("/api/files")
 def upload_files_view():
     files = request.files.getlist("files")
-    return upload_files(get_path(), files)
+    return {"files": upload_files(get_path(), files)}
 
 @app.delete("/api/files")
 def delete_file_view():
