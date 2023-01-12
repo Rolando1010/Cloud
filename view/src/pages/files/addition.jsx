@@ -19,7 +19,7 @@ const Addition = ({ updateContentDirectory }) => {
     }
 
     const handleFileUpload = () => {
-        uploadFiles(files).then(sentFiles => {
+        uploadFiles(files).then(({files: sentFiles}) => {
             sentFiles.forEach(({ success, file, message }) => {
                 if(success){
                     successToast(`file ${file} successfully uploaded`);

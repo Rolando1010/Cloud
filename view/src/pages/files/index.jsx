@@ -10,8 +10,6 @@ const Files = () => {
         updateContentDirectory
     } = useDirectory();
 
-    console.log(directories, files);
-
     return (<>
         <Path/>
         <Addition updateContentDirectory={updateContentDirectory}/>
