@@ -1,0 +1,120 @@
+.directoryList {
+    padding: 0;
+}
+
+.directoryList a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.directoryList li {
+    list-style: none;
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.directoryList li:hover {
+    background-color: #26262e;
+}
+
+.directoryList a:hover {
+    color: #2c90a1;
+}
+
+.directoryList i {
+    font-size: 20px;
+    width: 30px;
+}
+
+.directoryList div {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.directoryList button {
+    background-color: transparent;
+    border-color: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 0;
+    border-width: 0;
+}
+
+.directoryList button:hover {
+    color: #2c90a1;
+}
+
+.message {
+    margin: 0;
+    color: #6b6b7a;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.buttonsContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pathContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+}
+
+.pathContainer a {
+    font-size: 30px;
+    color: #ffffff;
+    padding: 5px 10px;
+}
+
+.pathContainer a:hover {
+    background-color: #26262e;
+}
+
+.pathForm {
+    background-color: #26262e;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.pathForm input {
+    background: transparent;
+    border-color: transparent;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.pathForm input:focus {
+    outline: none;
+}
+
+.filesList {
+    padding: 0;
+}
+
+.filesList li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filesList li button {
+    background-color: transparent;
+    border-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.filesList li button:hover, filesList li button:focus {
+    color: #2c90a1;
+}

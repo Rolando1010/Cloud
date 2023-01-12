@@ -1,0 +1,10 @@
+.container {
+    padding: 20px;
+    text-align: center;
+    border-width: 2px;
+    border-style: dashed;
+    background-color: #26262e;
+    outline: none;
+    transition: border .24s ease-in-out;
+    cursor: pointer;
+}

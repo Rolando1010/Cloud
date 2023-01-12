@@ -1,0 +1,50 @@
+.buttonsContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.noteText {
+    width: 100%;
+    background-color: #26262e;
+    outline: none;
+    border: 0;
+    min-height: 70px;
+    color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.listNotes {
+    margin-top: 15px;
+}
+
+.note {
+    list-style: none;
+}
+
+.note:hover, .note:focus {
+    background-color: #26262e;
+}
+
+.note a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.note div {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.newNoteLink {
+    color: #2c90a1;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.newNoteLink:hover {
+    color: #1e5a64;
+}

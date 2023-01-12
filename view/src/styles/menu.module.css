@@ -1,0 +1,39 @@
+.menu {
+    padding: 15px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #525157;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    color: #2c90a1;
+    margin: 0;
+    font-style: italic;
+    font-size: 32px;
+    outline: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.title img {
+    width: 50px;
+}
+
+.linksContainer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.linksContainer a {
+    font-size: 20px;
+    color: #2c90a1;
+    text-decoration: none;
+}
+
+.linksContainer a:hover {
+    color: #1e5a64;
+}

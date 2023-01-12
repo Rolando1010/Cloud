@@ -1,0 +1,27 @@
+.date {
+    margin: 20px 0 10px 0;
+    text-align: right;
+}
+
+.noteForm input, .noteForm textarea {
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 10px 0;
+    background-color: #26262e;
+    outline: none;
+    border: 0;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.noteForm textarea {
+    min-height: 70px;
+
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    justify-content: right;
+}
