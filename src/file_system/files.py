@@ -40,7 +40,7 @@ def upload_files(directory: str, files: list[FileStorage]):
         results += [{
             "success": True,
             "message": "",
-            "file": file.name
+            "file": file.filename
         }]
     return results
 

@@ -4,7 +4,7 @@ import styles from "../../styles/files.module.css";
 import Button from "../../components/button";
 import Modal from "../../components/modal";
 import FileInput from "../../components/file-input";
-import { errorToast, successToast } from "../../components/toast";
+import { errorToast, loadToast, successToast } from "../../components/toast";
 import Input from "../../components/input";
 
 const Addition = ({ updateContentDirectory }) => {
@@ -19,13 +19,12 @@ const Addition = ({ updateContentDirectory }) => {
     }
 
     const handleFileUpload = () => {
-        uploadFiles(files).then(({files: sentFiles}) => {
+        const fileUploading = uploadFiles(files);
+        loadToast(fileUploading, "Uploading files", "Files uploaded", "Files upload failed");
+        fileUploading.then(({files: sentFiles}) => {
             sentFiles.forEach(({ success, file, message }) => {
-                if(success){
-                    successToast(`file ${file} successfully uploaded`);
-                } else {
-                    errorToast(message);
-                }
+                if(success) successToast(`File ${file} successfully uploaded`);
+                else errorToast(message);
             });
             setFiles([]);
             uploadFilesRef.close();
@@ -38,9 +37,9 @@ const Addition = ({ updateContentDirectory }) => {
         const folderName = folderNameRef.current.value;
         createFolder(folderName).then(({ success, message }) => {
             if(success){
-                successToast(`folder ${folderName} created successfully`);
+                successToast(`Folder ${folderName} created successfully`);
             } else {
-                errorToast(`folder ${folderName} ${message}`);
+                errorToast(`Folder ${folderName} ${message}`);
             }
             folderNameRef.current.value = "";
             createFolderRef.close();

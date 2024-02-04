@@ -10,11 +10,16 @@ const successToast = message => toast.success(message, toastConfig);
 
 const errorToast = message => toast.error(message, toastConfig);
 
+const loadToast = (promise, loadingMessage, successMessage, errorMessage) => toast.promise(promise, {
+    loading: loadingMessage, success: successMessage, error: errorMessage
+}, toastConfig);
+
 const ToastContainer = () => <Toaster position="top-left"/>;
 
 export {
     successToast,
-    errorToast
+    errorToast,
+    loadToast
 }
 
 export default ToastContainer;
