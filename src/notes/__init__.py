@@ -44,7 +44,7 @@ def get_note(note_id: int, code: str="") -> dict[str, str]:
         return filtered_note
     return
 
-def update_note(note_id: int, title: str, description: str, code: str) -> str | None:
+def update_note(note_id: int, title: str, description: str, code: str) -> "str | None":
     error = ""
     data_notes = get_data_notes()
     notes = data_notes["notes"]
