@@ -11,9 +11,12 @@ const NoteForm = ({ note, onUpdateNote, onSubmit, actions }) => {
         <form className={styles.noteForm} onSubmit={onSubmit}>
             <input placeholder="Title" value={note.title} onChange={handleChange("title")}/>
             <textarea placeholder="Description" value={note.description} onChange={handleChange("description")}></textarea>
+            {(!note.id || note.encoded) &&
+                <input type="text" onChange={handleChange("code")} placeholder="Code"/>
+            }
        </form>
         <div className={styles.actions}>
-            <Button type="primary" onClick={onSubmit}>Guardar</Button>
+            <Button type="primary" onClick={onSubmit}>Save</Button>
             {actions}
         </div>
     </>);

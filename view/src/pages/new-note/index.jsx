@@ -5,7 +5,7 @@ import { errorToast, successToast } from "../../components/toast";
 import requests from "../../utils/requests";
 
 const NewNote = () => {
-    const [note, setNote] = useState({ title: "", description: "" });
+    const [note, setNote] = useState({ title: "", description: "", code: "" });
     const navigate = useNavigate();
 
     const createNote = () => {

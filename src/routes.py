@@ -43,22 +43,29 @@ def get_notes_view():
 def save_note_view():
     title = request.json["title"]
     description = request.json["description"]
-    save_note(title, description)
+    code = request.json["code"]
+    save_note(title, description, code)
     return {"success": True}
 
 @app.get("/api/notes/<int:note_id>")
 def get_note_view(note_id: int):
     note = get_note(note_id)
-    if note:
-        return {"success": True, "note": note}
-    return {"success": False, "message": "Not finded note"}
+    if note: return {"success": True, "note": note}
+    return {"success": False, "message": "Not found note"}
+
+@app.post("/api/notes/<int:note_id>")
+def decode_note_view(note_id: int):
+    note = get_note(note_id, request.json["code"])
+    if note: return {"success": True, "note": note}
+    return {"success": False, "message": "Not found note"}
 
 @app.put("/api/notes/<int:note_id>")
 def update_note_view(note_id: int):
     title = request.json["title"]
     description = request.json["description"]
-    update_note(note_id, title, description)
-    return {"success": True}
+    code = request.json.get("code", "")
+    message = update_note(note_id, title, description, code)
+    return {"success": True, "message": message}
 
 @app.delete("/api/notes/<int:note_id>")
 def delete_note_view(note_id: int):
