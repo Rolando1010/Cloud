@@ -25,3 +25,9 @@
     gap: 10px;
     justify-content: right;
 }
+
+@media (max-width: 400px){
+    .actions {
+        flex-direction: column;
+    }
+}
